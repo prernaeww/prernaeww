@@ -1,8 +1,8 @@
-@font-face {font-family: 'Open Sans'; src: url('https://abctogo.com/assets/fonts/website/OpenSans-Bold.woff2') format('woff2'), url('https://abctogo.com/assets/fonts/website/OpenSans-Bold.woff') format('woff'); font-weight: bold; font-style: normal; font-display: swap; }
-@font-face {font-family: 'Open Sans'; src: url('https://abctogo.com/assets/fonts/website/OpenSans-Light.woff2') format('woff2'), url('https://abctogo.com/assets/fonts/website/OpenSans-Light.woff') format('woff'); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face {font-family: 'Open Sans'; src: url('https://abctogo.com/assets/fonts/website/OpenSans-Medium.woff2') format('woff2'), url('https://abctogo.com/assets/fonts/website/OpenSans-Medium.woff') format('woff'); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face {font-family: 'Open Sans'; src: url('https://abctogo.com/assets/fonts/website/OpenSans-SemiBold.woff2') format('woff2'), url('https://abctogo.com/assets/fonts/website/OpenSans-SemiBold.woff') format('woff'); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face {font-family: 'Open Sans'; src: url('https://abctogo.com/assets/fonts/website/OpenSans-Regular.woff2') format('woff2'), url('https://abctogo.com/assets/fonts/website/OpenSans-Regular.woff') format('woff'); font-weight: normal; font-style: normal; font-display: swap; }
+@font-face {font-family: 'Open Sans'; src: url('./assets/fonts/website/OpenSans-Bold.woff2') format('woff2'), url('./assets/fonts/website/OpenSans-Bold.woff') format('woff'); font-weight: bold; font-style: normal; font-display: swap; }
+@font-face {font-family: 'Open Sans'; src: url('./assets/fonts/website/OpenSans-Light.woff2') format('woff2'), url('./assets/fonts/website/OpenSans-Light.woff') format('woff'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face {font-family: 'Open Sans'; src: url('./assets/fonts/website/OpenSans-Medium.woff2') format('woff2'), url('./assets/fonts/website/OpenSans-Medium.woff') format('woff'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face {font-family: 'Open Sans'; src: url('./assets/fonts/website/OpenSans-SemiBold.woff2') format('woff2'), url('./assets/fonts/website/OpenSans-SemiBold.woff') format('woff'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face {font-family: 'Open Sans'; src: url('./assets/fonts/website/OpenSans-Regular.woff2') format('woff2'), url('./assets/fonts/website/OpenSans-Regular.woff') format('woff'); font-weight: normal; font-style: normal; font-display: swap; }
 /* commom css */
 *{margin: 0; padding: 0; list-style: none; box-sizing: border-box;}
 a{text-decoration: none; display: inline-block; transition:  0.2s ease-in;}
@@ -43,7 +43,7 @@ h6{font-size: 18px; line-height: 1.3 !important; font-weight: 700; color: #000;}
 .form-control:focus{box-shadow: none; outline: 0;}
 .relative{position: relative;}
 .form-control::placeholder{color: #BEC2CE;}
-select{appearance: none;/*  background: url('https://abctogo.com/assets/images/website/angle-down.png') no-repeat right 15px center; */}
+select{appearance: none;/*  background: url('./assets/images/website/angle-down.png') no-repeat right 15px center; */}
 select:focus{outline: 0;}
 .text-underline{text-decoration: underline !important;}
 .pointer{cursor: pointer;}
@@ -93,34 +93,34 @@ footer{background: #D8E6F0; bottom: 0;width: 100%;}
 footer .border-top {border-top: 1px solid #ced2d5!important;}
 .quick-links li.active a, .quick-links li a:hover{color: #5E97BE;text-shadow: 0 0 1px #5E97BE;}
 .quick-links li{margin-bottom: 15px;}
-.facebook{background: url('https://abctogo.com/assets/images/website/facebook.png') no-repeat center center; padding: 18px;}
-.instagram{background: url('https://abctogo.com/assets/images/website/instagram.png') no-repeat center center; padding: 18px;}
-.twitter{background: url('https://abctogo.com/assets/images/website/twitter.png') no-repeat center center; padding: 18px;}
+.facebook{background: url('./assets/images/website/facebook.png') no-repeat center center; padding: 18px;}
+.instagram{background: url('./assets/images/website/instagram.png') no-repeat center center; padding: 18px;}
+.twitter{background: url('./assets/images/website/twitter.png') no-repeat center center; padding: 18px;}
 /* home page css */
-.banner{background: url('https://abctogo.com/assets/images/website/banner-img.jpg') no-repeat center center; background-size: cover; padding: 200px 0; margin-top: -10px;}
+.banner{background: url('./assets/images/website/banner-img.jpg') no-repeat center center; background-size: cover; padding: 200px 0; margin-top: -10px;}
 .banner-search{background-color: #fff; border-radius: 50px; }
-.banner-search input{padding: 20px; width: 100%; border: 0; border-radius: 50px 0 0 50px; padding-left: 60px; background: url('https://abctogo.com/assets/images/website/pin.png') no-repeat left 30px center;}
+.banner-search input{padding: 20px; width: 100%; border: 0; border-radius: 50px 0 0 50px; padding-left: 60px; background: url('./assets/images/website/pin.png') no-repeat left 30px center;}
 .banner-search button{min-width: 250px; background-color: #5E97BE; border-radius:  0 50px 50px 0; padding: 20px; color: #fff;}
-.order-complete label{position: absolute; top: 5px; right: 5px; background: url('https://abctogo.com/assets/images/website/check.jpg') no-repeat left 20px center; padding-left: 70px !important; background-size: 35px;}
+.order-complete label{position: absolute; top: 5px; right: 5px; background: url('./assets/images/website/check.jpg') no-repeat left 20px center; padding-left: 70px !important; background-size: 35px;}
 .total-downloads{max-width: 400px; position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%);}
 .food-lovers .food-lovers-img img{height: 98px; width: 98px; object-fit: cover;}
 /* about us page */
 .page-label{background-color: #EEF4F9; color: #5E97BE; padding: 10px 50px; border-radius: 50px; text-transform: uppercase; letter-spacing: 3px;}
-.scroll-for-explore{color: #FE180C; background: url('https://abctogo.com/assets/images/website/angle-down.jpg') no-repeat left center; padding-left: 25px;}
+.scroll-for-explore{color: #FE180C; background: url('./assets/images/website/angle-down.jpg') no-repeat left center; padding-left: 25px;}
 .our-vision{padding-bottom: 240px !important;}
 .custom-video{margin-top: -220px;}
-.faq-img:before{position: absolute; content: ""; width: 290px; height: 177px; background: url('https://abctogo.com/assets/images/website/dots.jpg') no-repeat center center; right: -80px; bottom: -80px; z-index: -1;}
+.faq-img:before{position: absolute; content: ""; width: 290px; height: 177px; background: url('./assets/images/website/dots.jpg') no-repeat center center; right: -80px; bottom: -80px; z-index: -1;}
 .about-us-faq{margin-bottom: 200px;}
 .about-us-faq .card {background-color: #fff; border: 0; border-radius: 0;}
 .about-us-faq .card-header {padding: 0; border-radius: 10px !important; background-color: transparent; border-bottom: 0; cursor: pointer;}
 .about-us-faq .faq-1, .about-us-faq .faq-2, .about-us-faq .faq-3, .about-us-faq .faq-4 {padding-left: 70px !important; }
-.about-us-faq .faq-1{background: url('https://abctogo.com/assets/images/website/faq1.jpg') no-repeat left 20px top 20px;}
-.about-us-faq .faq-2{background: url('https://abctogo.com/assets/images/website/faq2.jpg') no-repeat left 20px top 20px;}
-.about-us-faq .faq-3{background: url('https://abctogo.com/assets/images/website/faq3.jpg') no-repeat left 20px top 20px;}
-.about-us-faq .faq-4{background: url('https://abctogo.com/assets/images/website/faq4.jpg') no-repeat left 20px top 20px;}
+.about-us-faq .faq-1{background: url('./assets/images/website/faq1.jpg') no-repeat left 20px top 20px;}
+.about-us-faq .faq-2{background: url('./assets/images/website/faq2.jpg') no-repeat left 20px top 20px;}
+.about-us-faq .faq-3{background: url('./assets/images/website/faq3.jpg') no-repeat left 20px top 20px;}
+.about-us-faq .faq-4{background: url('./assets/images/website/faq4.jpg') no-repeat left 20px top 20px;}
 .about-us-faq .card-header.collapsed{box-shadow: none !important;}
 .custom-video .js-video{position:relative;}
-.custom-video .play{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 100%; height: 98px; width: 98px; background: url('https://abctogo.com/assets/images/website/play-icon.jpg') no-repeat center center; }
+.custom-video .play{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 100%; height: 98px; width: 98px; background: url('./assets/images/website/play-icon.jpg') no-repeat center center; }
 .custom-video .play:hover{cursor:pointer;}
 .custom-video .js-video iframe{z-index:5; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 20px; }
 /* contact us page */
@@ -128,38 +128,38 @@ footer .border-top {border-top: 1px solid #ced2d5!important;}
 .contact-us-page .input-field{width: 100%; background-color: #D9E6F0; padding: 10px 25px; border: 0; outline: 0; color: #064271;}
 .contact-us-form{background-color: #F7FAFC;}
 .contact-us-form input[type="file"]{font-size: 0; height: 0; width: 0;}
-.contact-us-form .upload-file{background: url('https://abctogo.com/assets/images/website/attachment.png') no-repeat right center; padding-right: 40px; cursor: pointer;}
+.contact-us-form .upload-file{background: url('./assets/images/website/attachment.png') no-repeat right center; padding-right: 40px; cursor: pointer;}
 /* sign-in-page css */
-.sign-in-page{height: 100vh; padding: 100px 0; background: url('https://abctogo.com/assets/images/website/bottles.png') no-repeat left bottom, linear-gradient(to bottom, #fff 50%, #5E97BE 0%);}
+.sign-in-page{height: 100vh; padding: 100px 0; background: url('./assets/images/website/bottles.png') no-repeat left bottom, linear-gradient(to bottom, #fff 50%, #5E97BE 0%);}
 .sign-in-box{padding: 30px 120px;}
 .forgot-password{color: #1C1B1B;}
 .forgot-password:hover{color: #5E97BE;}
 .sign-in-input-field{width: 100%; background-color: transparent; border: 0; border-radius: 0; outline: 0; padding: 10px 20px; padding-left: 50px;}
 .border-bottom-login{border-bottom: 1px solid #E4E5E5;}
 .sign-in-input-field::placeholder{color: #8D8D8D;}
-.input-email{background: url('https://abctogo.com/assets/images/website/input-email.png') no-repeat left center;}
-.input-password{background: url('https://abctogo.com/assets/images/website/lock.png') no-repeat left center;}
+.input-email{background: url('./assets/images/website/input-email.png') no-repeat left center;}
+.input-password{background: url('./assets/images/website/lock.png') no-repeat left center;}
 .hide-password{min-width: 80px;}
 .login-title:before{position: absolute; content: ""; width: 30px; height: 3px; background-color: #000; border-radius: 50px; bottom: 0; left: 0;}
 .otp-box input {text-align: center; outline: none; transition: all .2s ease-in-out; border-radius: 50%; height: 50px; width: 50px; border: 0; color: #fff; background-color: #EAECEF; margin: 0 5px; }
 .otp-box input:focus, .otp-box input:valid {background-color: #5E97BE;}
 /* signup page */
 .sign-up-wrap{max-width: 1760px !important;}
-.business{background: url('https://abctogo.com/assets/images/website/online-shop.png') no-repeat left center;}
-.last-name{background: url('https://abctogo.com/assets/images/website/last-name.png') no-repeat left center;}
-.input-call{background: url('https://abctogo.com/assets/images/website/input-call.png') no-repeat left center;}
+.business{background: url('./assets/images/website/online-shop.png') no-repeat left center;}
+.last-name{background: url('./assets/images/website/last-name.png') no-repeat left center;}
+.input-call{background: url('./assets/images/website/input-call.png') no-repeat left center;}
 .sign-up-as li a{padding: 3px 20px; color: #4D4D4D; border-radius: 50px; font-size: 16px; border: 1px solid #5E97BE;}
 .sign-up-as li a:hover, .sign-up-as li.active a{background-color: #5E97BE; color: #fff;}
 /*all modals css */
 button.close {width: 35px; height: 35px; position: absolute; right: -16px; top: -16px; opacity: 1; background-color: #5E97BE; border-radius: 100%; color: #fff; font-size: 25px; font-weight: 500; z-index: 1;}
 button.close:hover{color: #fff;}
-.modal-content {min-height: 600px; background-color: #fff !important; background: url('https://abctogo.com/assets/images/website/modal-bg-img.jpg') no-repeat center bottom; background-size: contain;}
+.modal-content {min-height: 600px; background-color: #fff !important; background: url('./assets/images/website/modal-bg-img.jpg') no-repeat center bottom; background-size: contain;}
 .modal-body {flex: 0;}
 button.back-button {position: absolute; left: -20px; top:30px;}
 #age-confirmation ul li button{padding: 5px 40px; border: 1px solid #5E97BE; border-radius: 10px; margin: 10px 30px 0; transition: 0.2s easein; color: #5e97be;}
 #age-confirmation ul li button:hover, #age-confirmation ul li.active button{background-color: #5E97BE; color: #fff;}
 #age-confirmation .bg-blue{background-color: #F8FBFD;}
-.enter-zipcode-field{padding: 10px 20px; padding-right: 50px; background: url('https://abctogo.com/assets/images/website/search.jpg') no-repeat right 20px center; border: 1px solid #5E97BE; border-radius: 50px; min-width: 100%;}
+.enter-zipcode-field{padding: 10px 20px; padding-right: 50px; background: url('./assets/images/website/search.jpg') no-repeat right 20px center; border: 1px solid #5E97BE; border-radius: 50px; min-width: 100%;}
 .saved-address-list{border: 1px solid #cfcfcf; border-radius: 10px; margin-bottom: 15px;}
 .saved-address-list p{color: #818181;}
 .address-edit{position: absolute; top: 35px; right: 0; z-index: 1; opacity: 0; visibility: hidden; transition: 0.2s ease-in;}
@@ -171,14 +171,14 @@ button.back-button {position: absolute; left: -20px; top:30px;}
 #account-detail-modal .sign-in-input-field, #add-address-modal .sign-in-input-field{padding-left: 0px;}
 .account-profile-image img{height: 250px; object-fit: cover;}
 .image-upload input{font-size: 0; height: 0; width: 0;}
-.image-upload{background: url('https://abctogo.com/assets/images/website/image-edit.jpg') no-repeat left center; padding-left: 30px; cursor: pointer;}
+.image-upload{background: url('./assets/images/website/image-edit.jpg') no-repeat left center; padding-left: 30px; cursor: pointer;}
 .menu .dropdown-menu {top: 65px; left: auto; right: -60px; min-width: 450px; border: 0;}
 .notification-wrap:last-child .border-bottom{border-bottom: 0 !important;}
 .notification-wrap:last-child{margin-bottom: 0 !important;}
 .notification .dropdown-menu:before{position: absolute; content: ""; width: 20px; height: 20px; background-color: #fff; top: -10px; right: 60px; transform: rotate(45deg);}
 .menu .dropdown-toggle::after{display: none;}
-.pick-up-method1{padding-left: 80px; background: url('https://abctogo.com/assets/images/website/pick-up-method1.jpg') no-repeat left 15px center;}
-.pick-up-method2{padding-left: 80px; background: url('https://abctogo.com/assets/images/website/pick-up-method2.jpg') no-repeat left 15px center;}
+.pick-up-method1{padding-left: 80px; background: url('./assets/images/website/pick-up-method1.jpg') no-repeat left 15px center;}
+.pick-up-method2{padding-left: 80px; background: url('./assets/images/website/pick-up-method2.jpg') no-repeat left 15px center;}
 .pick-up-method input[type="radio"]{font-size: 0; height: 0; width: 0; opacity: 0; visibility: hidden;}
 .pick-up-method label:before{position: absolute; content: ""; width: 30px; height: 30px; border-radius: 100%; border: 2px solid #5E97BE; left: 0; top: 50%; transform: translateY(-50%);}
 .pick-up-method label{padding-left: 40px; cursor: pointer;}
@@ -190,7 +190,7 @@ button.back-button {position: absolute; left: -20px; top:30px;}
 .ordered-product-slider ul.slick-dots li button {font-size: 0; width: 7px; height: 7px; background-color: #AECBDE; border-radius: 100%; transition: 0.2s easein; }
 .ordered-product-slider ul.slick-dots li{line-height: 0; margin: 6px 0;}
 .ordered-product-slider ul.slick-dots li.slick-active button{height: 30px; border-radius: 50px; background-color: #5E97BE;}
-.map-nearby-store-location{padding-left: 50px; background: url('https://abctogo.com/assets/images/website/location-icon.jpg') no-repeat left center;}
+.map-nearby-store-location{padding-left: 50px; background: url('./assets/images/website/location-icon.jpg') no-repeat left center;}
 .stores-tab ul.nav li{flex-basis: 50%;}
 .stores-tab .nav-pills .nav-link.active, .nav-pills .show>.nav-link {color: #fff; background-color: #5E97BE;}
 .stores-tab .nav-pills .nav-link {border-radius: 10px; color: #5e97be;}
@@ -203,15 +203,15 @@ button.back-button {position: absolute; left: -20px; top:30px;}
 .account-page-settings ul li a, .account-page-settings ul li button{padding-top: 15px; padding-bottom: 15px; color: #19181A; display: block;}
 .account-page-settings ul li:before{position: absolute; content: ""; width: 250px; height: 1px; border-bottom: 1px solid #E7E7E7; bottom: 0; left: 50px;}
 .account-page-settings ul li:last-child:before{display: none;}
-.acc-account-detail{padding-left: 50px; background: url('https://abctogo.com/assets/images/website/acc-user.jpg') no-repeat left center, url('https://abctogo.com/assets/images/website/acc-angle-right.jpg') no-repeat right center; padding-right: 30px;}
-.acc-saved{padding-left: 50px; background: url('https://abctogo.com/assets/images/website/acc-heart.jpg') no-repeat left center, url('https://abctogo.com/assets/images/website/acc-angle-right.jpg') no-repeat right center; padding-right: 30px;}
-.acc-address{padding-left: 50px; background: url('https://abctogo.com/assets/images/website/acc-book.jpg') no-repeat left center, url('https://abctogo.com/assets/images/website/acc-angle-right.jpg') no-repeat right center; padding-right: 30px;}
-.acc-notification{padding-left: 50px; background: url('https://abctogo.com/assets/images/website/acc-bell.jpg') no-repeat left center, url('https://abctogo.com/assets/images/website/acc-angle-right.jpg') no-repeat right center; padding-right: 30px;}
-.acc-ads{padding-left: 50px; background: url('https://abctogo.com/assets/images/website/acc-ads.jpg') no-repeat left center, url('https://abctogo.com/assets/images/website/acc-angle-right.jpg') no-repeat right center; padding-right: 30px;}
-.save-card{padding-left: 50px; background: url('https://abctogo.com/assets/images/website/ic_payment_methods.png') no-repeat left center, url('https://abctogo.com/assets/images/website/acc-angle-right.jpg') no-repeat right center; padding-right: 30px;}
+.acc-account-detail{padding-left: 50px; background: url('./assets/images/website/acc-user.jpg') no-repeat left center, url('./assets/images/website/acc-angle-right.jpg') no-repeat right center; padding-right: 30px;}
+.acc-saved{padding-left: 50px; background: url('./assets/images/website/acc-heart.jpg') no-repeat left center, url('./assets/images/website/acc-angle-right.jpg') no-repeat right center; padding-right: 30px;}
+.acc-address{padding-left: 50px; background: url('./assets/images/website/acc-book.jpg') no-repeat left center, url('./assets/images/website/acc-angle-right.jpg') no-repeat right center; padding-right: 30px;}
+.acc-notification{padding-left: 50px; background: url('./assets/images/website/acc-bell.jpg') no-repeat left center, url('./assets/images/website/acc-angle-right.jpg') no-repeat right center; padding-right: 30px;}
+.acc-ads{padding-left: 50px; background: url('./assets/images/website/acc-ads.jpg') no-repeat left center, url('./assets/images/website/acc-angle-right.jpg') no-repeat right center; padding-right: 30px;}
+.save-card{padding-left: 50px; background: url('./assets/images/website/ic_payment_methods.png') no-repeat left center, url('./assets/images/website/acc-angle-right.jpg') no-repeat right center; padding-right: 30px;}
 
-.acc-education{padding-left: 50px; background: url('https://abctogo.com/assets/images/website/acc-education.jpg') no-repeat left center, url('https://abctogo.com/assets/images/website/acc-angle-right.jpg') no-repeat right center; padding-right: 30px;}
-.acc-logout{padding-left: 50px; background: url('https://abctogo.com/assets/images/website/acc-logout.jpg') no-repeat left center;}
+.acc-education{padding-left: 50px; background: url('./assets/images/website/acc-education.jpg') no-repeat left center, url('./assets/images/website/acc-angle-right.jpg') no-repeat right center; padding-right: 30px;}
+.acc-logout{padding-left: 50px; background: url('./assets/images/website/acc-logout.jpg') no-repeat left center;}
 .notification-toggle:before{position: absolute; content: ""; width: 50px; height: 24px; border-radius: 50px; background-color: #E7F0F5; right: 0; top: 50%; transform: translateY(-50%);}
 .notification-toggle:after{position: absolute; content: ""; width: 16px; height: 16px; border-radius: 100%; background-color: #5E97BE; right: 29px; top: 50%; transform: translateY(-50%); }
 .notification-toggle.active:after{right: 5px; transition: 0.25s linear;}
@@ -222,14 +222,14 @@ button.back-button {position: absolute; left: -20px; top:30px;}
 /* products listing page */
 .pl-products-slider{background-color: #F7F8FA; padding: 0 100px;}
 .pl-products-slider .slick-slide img {display: inline-block; }
-.pl-products-slider button.slick-prev.slick-arrow {font-size: 0; width: 50px; height: 50px; border-radius: 100%; background-color: #EEF0F3 !important; background: url('https://abctogo.com/assets/images/website/prev-black.png') no-repeat center center; position: absolute; left: 30px; top: 50%; transform: translateY(-50%); transition: 0.2s ease-in;}
-.pl-products-slider button.slick-next.slick-arrow {font-size: 0; width: 50px; height: 50px; border-radius: 100%; background-color: #EEF0F3 !important; background: url('https://abctogo.com/assets/images/website/next-black.png') no-repeat center center; position: absolute; right: 30px; top: 50%; transform: translateY(-50%); transition: 0.2s ease-in;}
-.pl-products-slider button.slick-prev.slick-arrow:hover{background-color: #5E97BE !important; background: url('https://abctogo.com/assets/images/website/prev-white.png') no-repeat center center;}
-.pl-products-slider button.slick-next.slick-arrow:hover{background-color: #5E97BE !important; background: url('https://abctogo.com/assets/images/website/next-white.png') no-repeat center center;}
+.pl-products-slider button.slick-prev.slick-arrow {font-size: 0; width: 50px; height: 50px; border-radius: 100%; background-color: #EEF0F3 !important; background: url('./assets/images/website/prev-black.png') no-repeat center center; position: absolute; left: 30px; top: 50%; transform: translateY(-50%); transition: 0.2s ease-in;}
+.pl-products-slider button.slick-next.slick-arrow {font-size: 0; width: 50px; height: 50px; border-radius: 100%; background-color: #EEF0F3 !important; background: url('./assets/images/website/next-black.png') no-repeat center center; position: absolute; right: 30px; top: 50%; transform: translateY(-50%); transition: 0.2s ease-in;}
+.pl-products-slider button.slick-prev.slick-arrow:hover{background-color: #5E97BE !important; background: url('./assets/images/website/prev-white.png') no-repeat center center;}
+.pl-products-slider button.slick-next.slick-arrow:hover{background-color: #5E97BE !important; background: url('./assets/images/website/next-white.png') no-repeat center center;}
 /*.pl-products-slider .pl-products-slider-list.slick-slide.slick-current.slick-active{background-color: #5E97BE; position: relative;}*/
 /* .pl-products-slider .pl-products-slider-list.slick-slide.slick-current.slick-active:before{position: absolute; content: ""; width: 15px; height: 15px;background-color: #000000; bottom: -7px; left: 50%; transform: translateX(-50%) rotate(45deg); z-index: 1; } */
 .pl-products-slider .pl-products-slider-list{padding: 10px; height: 120px;}
-.products-category-select{border: 1px solid #BEC2CE; border-radius: 10px; padding: 10px 40px 10px 60px; min-width: 350px; background: url('https://abctogo.com/assets/images/website/select-category.jpg') no-repeat left 20px center, url('https://abctogo.com/assets/images/website/select-down.jpg') no-repeat right 20px center; cursor: pointer; font-weight: 600;}
+.products-category-select{border: 1px solid #BEC2CE; border-radius: 10px; padding: 10px 40px 10px 60px; min-width: 350px; background: url('./assets/images/website/select-category.jpg') no-repeat left 20px center, url('./assets/images/website/select-down.jpg') no-repeat right 20px center; cursor: pointer; font-weight: 600;}
 .store-image-slider ul.slick-dots {position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); display: flex; margin-bottom: 0; }
 .store-image-slider ul.slick-dots li button {font-size: 0; width: 7px; height: 7px; background-color: #AECBDE; border-radius: 100%; transition: 0.2s easein; }
 .store-image-slider ul.slick-dots li{line-height: 0; margin: 0 5px;}
@@ -265,7 +265,7 @@ button.back-button {position: absolute; left: -20px; top:30px;}
 .product-quantity-ml li button{padding: 10px 15px; border-radius: 10px; background-color: #fff; box-shadow: 0  3px 16px rgba(0, 0, 0, 0.1); margin-right: 15px; margin-bottom: 15px; color: #5E97BE; transition: 0.2s ease-in; position: relative;}
 .product-quantity-ml li button.active{background-color: #5E97BE; color: #fff;}
 .product-quantity-ml li button span{color: #DEDEDE; font-size: 10px; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 100%;}
-.product-quantity-select{border-radius: 10px; border: 0; background-color: #fff; box-shadow: 0  3px 16px rgba(0, 0, 0, 0.1); padding: 10px 50px 10px 25px; background: url('https://abctogo.com/assets/images/website/select-down-blue.jpg') no-repeat right 20px center; cursor: pointer; font-weight: 600;}
+.product-quantity-select{border-radius: 10px; border: 0; background-color: #fff; box-shadow: 0  3px 16px rgba(0, 0, 0, 0.1); padding: 10px 50px 10px 25px; background: url('./assets/images/website/select-down-blue.jpg') no-repeat right 20px center; cursor: pointer; font-weight: 600;}
 .product-detail-view-cart-left-img{background-color: #F9FBFD; width: 82px; height: 93px; padding: 10px;}
 .product-detail-view-cart-left-img img{width: 100%; height: 100%; object-fit: contain;}
 .product-detail-view-cart-left-detail{max-width: 300px;}
