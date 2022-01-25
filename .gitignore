@@ -3,7 +3,6 @@
 /public/storage
 /public/images/users
 server.php
-/config/database.php
 /storage/*.key
 /vendor
 .env.backup
