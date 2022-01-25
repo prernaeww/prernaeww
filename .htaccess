@@ -11,7 +11,7 @@
 
     RewriteEngine On
     RewriteCond %{SERVER_PORT} 80
-    RewriteRule ^(.*)$ https://abctogo.com/$1 [R,L]
+    #RewriteRule ^(.*)$ https://abctogo.com/$1 [R,L]
 	
     # Handle Authorization MemberHeader
     RewriteCond %{HTTP:Authorization} .

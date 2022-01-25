@@ -7,10 +7,10 @@
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 
-if(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'http' )
+/*if(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'http' )
 {
     header('Location:https://abctogo.com'. $_SERVER['REQUEST_URI']);
-}
+}*/
 
 $uri = urldecode(
     parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)

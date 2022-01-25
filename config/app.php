@@ -131,7 +131,8 @@ return [
 
 
 
-    'url' => env('APP_URL', 'https://abctogo.com/'),
+    /*'url' => env('APP_URL', 'https://abctogo.com/'),*/
+    'url' => 'http://abctogoprod-env.eba-xypr6ich.us-east-1.elasticbeanstalk.com/',
 
 
 
