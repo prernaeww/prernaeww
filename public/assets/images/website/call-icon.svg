@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+  <g id="Group_60391" data-name="Group 60391" transform="translate(-316 -270)">
+    <path id="Icon_ionic-md-call" data-name="Icon ionic-md-call" d="M14.955,12.188a7.218,7.218,0,0,1-2.183-.338.575.575,0,0,0-.615.154L10.8,13.356A9.249,9.249,0,0,1,6.745,9.3L8.1,7.944a.641.641,0,0,0,.154-.615,6.689,6.689,0,0,1-.369-2.214A.617.617,0,0,0,7.268,4.5H5.115a.617.617,0,0,0-.615.615A10.447,10.447,0,0,0,14.955,15.57a.617.617,0,0,0,.615-.615V12.8a.617.617,0,0,0-.615-.612Z" transform="translate(316.5 269.5)" fill="#5e97be"/>
+    <g id="Ellipse_3414" data-name="Ellipse 3414" transform="translate(316 270)" fill="none" stroke="#5e97be" stroke-width="1">
+      <ellipse cx="10.5" cy="10" rx="10.5" ry="10" stroke="none"/>
+      <ellipse cx="10.5" cy="10" rx="10" ry="9.5" fill="none"/>
+    </g>
+  </g>
+</svg>

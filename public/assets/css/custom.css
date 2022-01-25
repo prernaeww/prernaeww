@@ -1,0 +1,308 @@
+/* vietnamese */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/quicksand/v15/6xKtdSZaM9iE8KbpRA_hJFQNcOM.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/quicksand/v15/6xKtdSZaM9iE8KbpRA_hJVQNcOM.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/quicksand/v15/6xKtdSZaM9iE8KbpRA_hK1QN.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/quicksand/v15/6xKtdSZaM9iE8KbpRA_hJFQNcOM.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/quicksand/v15/6xKtdSZaM9iE8KbpRA_hJVQNcOM.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/quicksand/v15/6xKtdSZaM9iE8KbpRA_hK1QN.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/quicksand/v15/6xKtdSZaM9iE8KbpRA_hJFQNcOM.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/quicksand/v15/6xKtdSZaM9iE8KbpRA_hJVQNcOM.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/quicksand/v15/6xKtdSZaM9iE8KbpRA_hK1QN.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/quicksand/v15/6xKtdSZaM9iE8KbpRA_hJFQNcOM.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/quicksand/v15/6xKtdSZaM9iE8KbpRA_hJVQNcOM.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/quicksand/v15/6xKtdSZaM9iE8KbpRA_hK1QN.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+body{
+	font-family: Quicksand,Georgia,'Times New Roman',Times,serif;
+}
+.content-page{
+  overflow: auto;
+  height: 100%;
+}
+.topbar .topbar-left{
+	background: #efecef;
+}
+.side-menu{
+	background: #ffffff;
+}
+.navbar-custom,.button-menu-mobile{
+	background-color: #e31e24;
+}
+.button-menu-mobile{
+	color: #efecef;
+}
+.theme-color, .theme-color:hover{
+  color: #8f183c;
+}
+.btn-theme, .badge-info{
+  background-color: #e31e24; 
+}
+#sidebar-menu > ul > li > a:hover, #sidebar-menu > ul > li > a:focus, #sidebar-menu > ul > li > a:active{
+	color: #e31e24;
+}
+#sidebar-menu > ul > li > a.active{
+    color: #e31e24 !important;
+    background-color: #e31e2429;
+    border-left: 5px solid;
+}
+.submenu li a:hover{
+  color: #e31e24;
+  background-color: #ffffff;
+}
+.topbar-page-title{
+	line-height: 50px;
+}
+.table > tbody > tr > td, .table > tfoot > tr > td, .table > thead > tr > td{
+  padding: 6px 12px;
+}
+.table tr{
+  font-size: 15px;
+}
+.font-15{
+  font-size: 15px;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+a.text-primary:focus, a.text-primary:hover{
+  color: #3eb7ba !important;
+}
+.alert.alert-danger p, .alert.alert-success p{
+  margin-bottom: 0;
+}
+.submenu li.active > a{
+  background-color: #ddf3f3;
+  color: #e31e24;
+}
+
+.select2-container {
+  width: 100% !important;
+}
+
+.select2-container .select2-selection--single {
+  border: 1px solid #E3E3E3;
+  height: 38px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  line-height: 36px;
+  padding-left: 12px;
+}
+
+.select2-container .select2-selection--single .select2-selection__arrow {
+  height: 34px;
+  width: 34px;
+  right: 3px;
+}
+
+.select2-container .select2-selection--single .select2-selection__arrow b {
+  border-color: #999 transparent transparent transparent;
+  border-width: 6px 6px 0 6px;
+}
+
+.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-color: transparent transparent #999 transparent;
+  border-width: 0 6px 6px 6px;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #e31e24;
+}
+
+.select2-results__option {
+  padding: 6px 12px;
+}
+
+.select2-dropdown {
+  border: 1px solid #e3e3e3;
+  padding-top: 5px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.select2-search input {
+  border: 1px solid #e3e3e3;
+}
+
+.select2-container .select2-selection--multiple {
+  min-height: 38px;
+  border: 1px solid #e3e3e3;
+}
+
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+  padding: 2px 10px;
+}
+
+.select2-container .select2-selection--multiple .select2-search__field {
+  margin-top: 7px;
+  border: 0;
+}
+
+.select2-container .select2-selection--multiple .select2-selection__choice {
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 1px;
+  padding: 0 7px;
+}
+
+/*** CUSTOM FILE INPUT STYE ***/
+.wrap-custom-file {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 0 0.5rem 1rem;
+  text-align: center;
+}
+.wrap-custom-file input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  overflow: hidden;
+  opacity: 0;
+}
+.wrap-custom-file label {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+.wrap-custom-file label span {
+  display: block;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: #777;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+.wrap-custom-file label .fa {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  -webkit-transform: translatex(-50%);
+  transform: translatex(-50%);
+  font-size: 1.5rem;
+  color: #460619;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.wrap-custom-file label:hover span, .wrap-custom-file label:hover .fa {
+  color: #333;
+}
+.wrap-custom-file label.file-ok {
+  background-size: cover;
+  background-position: center;
+}
+.wrap-custom-file label.file-ok span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.3rem;
+  font-size: 1.1rem;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.wrap-custom-file label.file-ok .fa {
+  display: none;
+}
+span.dtr-data {
+    display: inline-block !important;
+}
