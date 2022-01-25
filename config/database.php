@@ -1,8 +1,5 @@
 <?php
-define(RDS_HOSTNAME, $_SERVER['RDS_HOSTNAME']);
-define(RDS_USERNAME, $_SERVER['RDS_USERNAME']);
-define(RDS_PASSWORD, $_SERVER['RDS_PASSWORD']);
-define(RDS_DB_NAME, $_SERVER['RDS_DB_NAME']);
+
 
 
 use Illuminate\Support\Str;
@@ -97,15 +94,15 @@ return [
 
             'url' => env('DATABASE_URL'),
 
-            'host' => RDS_HOSTNAME,
+            'host' => "localhost",
 
             'port' => env('DB_PORT', '3306'),
 
-            'database' => RDS_DB_NAME,
+            'database' => "abctogo",
 
-            'username' => RDS_USERNAME,
+            'username' => "root",
 
-            'password' => RDS_PASSWORD,
+            'password' => "ABCtoGo123*#*",
 
             'unix_socket' => env('DB_SOCKET', ''),
 
@@ -143,7 +140,7 @@ return [
 
             'database' => env('DB_DATABASE', 'forge'),
 
-            'username' => RDS_USERNAME,
+            'username' => env('DB_USERNAME', 'forge'),
 
             'password' => env('DB_PASSWORD', ''),
 
