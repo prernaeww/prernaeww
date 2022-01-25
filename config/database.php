@@ -94,11 +94,11 @@ return [
 
             'url' => env('DATABASE_URL'),
 
-            'host' => "localhost",
+            'host' => "aabopzpyy5d224.ce61r2ibcows.us-east-1.rds.amazonaws.com",
 
             'port' => env('DB_PORT', '3306'),
 
-            'database' => "abctogo",
+            'database' => "ebdb",
 
             'username' => "root",
 
