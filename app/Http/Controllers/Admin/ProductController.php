@@ -10,7 +10,6 @@ use App\Models\Category;
 use App\Models\Measurement;
 use App\Models\Product;
 use App\Models\StoresProduct;
-use App\Models\Variant;
 use App\Models\Family;
 use App\Models\Cart;
 use App\Models\CartProducts;
@@ -225,7 +224,6 @@ class ProductController extends Controller
                 $family = $family->toArray();
                 $params['family'] = $family ;
             }
-            // $params['variant'] = Variant::where('product_id', $id)->get();
             $params['backUrl'] = route('admin.product.index');
             return view('admin.pages.product.put',$params);
         }else{
@@ -349,62 +347,6 @@ class ProductController extends Controller
         // }
         return redirect()->route('admin.product.index')
                         ->with('success','Product deleted successfully');
-    }
-
-    
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function addstore(Request $request, $id)
-    {
-        if(isset($request->store_id) && isset($request->variant_id) && isset($request->stock)){
-
-            $existing = StoresProduct::where('product_id', $id)->with(['variant', 'store'])->get();
-
-            $group_array = array();
-
-            foreach ($request->store_id as $key => $value) {
-                $group_array[$key]['user_id'] = $value;
-            }
-            foreach ($request->variant_id as $key => $value) {
-                $group_array[$key]['variant_id'] = $value;
-            }
-            foreach ($request->stock as $key => $value) {
-                $group_array[$key]['stock'] = $value;
-            }
-            foreach ($group_array as $key => $value) {
-                $group_array[$key]['product_id'] = $id;
-            }
-
-            if($existing){
-                $already_exist =  FALSE;
-                foreach ($existing as $e_key => $e_value) {
-                    foreach ($group_array as $key => $value) {
-                        if($value['user_id'] == $e_value->user_id && $value['variant_id'] == $e_value->variant_id){
-                            $already_exist =  TRUE;
-                            $already_exist_store = $e_value->store[0]->first_name;
-                            $already_exist_varient = $e_value->variant->quantity;
-                            $already_exist_msg = 'Duplicate entry exist for '.$e_value->store[0]->first_name. ' '.$e_value->variant->quantity.' '.$e_value->variant->measurement.'. Try again with proper inputs.';
-                        }
-                    }
-                }
-                if($already_exist == true){
-                    //return redirect()->route('admin.product.edit', $id)->with('error',$already_exist_msg);
-                    return redirect()->route('admin.product.index')
-                        ->with('error',$already_exist_msg);
-                }
-            }
-
-            $stores_product = StoresProduct::insert($group_array);
-            return redirect()->route('admin.product.index')
-                        ->with('success','Product stores added successfully');
-        }else{
-            return redirect()->route('admin.product.index')
-                        ->with('error','Selected data is incorrect.');
-        }
     }
 
     public function remove_product_store($id)

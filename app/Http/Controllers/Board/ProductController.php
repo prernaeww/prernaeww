@@ -21,10 +21,8 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        // 
     if ($request->ajax())
        {
-            // $data = Product::select('*')->orderBy('id','asc')->with('category','variant')->get();
             $login_id =  Auth::user()->id;
             $store = User::select('id')->where('parent_id',$login_id)->get()->pluck('id')->toArray();
             $storeproducts=StoresProduct::select('product_id')->whereIn('user_id',$store)->get()->pluck('product_id')->toArray();
@@ -48,7 +46,7 @@ class ProductController extends Controller
               
                 return $btn;
             })
-            ->rawColumns(['image','category_name','varient_data','status','action'])
+            ->rawColumns(['image','category_name','status','action'])
             ->make(true);
        }
        else

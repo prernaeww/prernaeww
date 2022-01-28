@@ -7,7 +7,6 @@ use CommonHelper;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Category;
 use App\Models\Product;
-use App\Models\Meal;
 use App\Models\User;
 use App\Models\Orders;
 use App\Models\StoresProduct;
@@ -44,8 +43,6 @@ class DashboardController extends Controller {
         // dd($params['products']);
         
         $params['store'] = User::select('users.*')->join('users_group', 'users.id', '=', 'users_group.user_id')->where('users_group.group_id',3)->count();
-
-        $params['meal'] = Meal::where('canteen_id',$login_id)->count();
         $params['order'] = Orders::count();
 
 

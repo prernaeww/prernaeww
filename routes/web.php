@@ -24,7 +24,10 @@ use Laravel\Socialite\Facades\Socialite;
 Route::get('home', 'Website\HomeController@index')->name('home');
 Route::get('appleredirect', 'Website\HomeController@appleredirect')->name('appleredirect');
 Route::post('applecallback', 'AppleSocialController@handleCallback')->name('applecallback');
-
+Route::get('age-restriction', 'Website\HomeController@age_restriction')->name('age-restriction');   
+Route::get('set-cookie', 'Website\HomeController@set_cookie')->name('set-cookie');  
+Route::get('get-cookie', 'Website\HomeController@get_cookie')->name('get-cookie');  
+Route::get('/', 'Website\HomeController@home');
 
 Route::post('store_list', 'Website\HomeController@store_list')->name('store_list');
 Route::get('deals', 'Website\HomeController@deals')->name('deals');
@@ -94,15 +97,10 @@ Route::get('board-forgot-password', 'CommonController@board_forgot_password')->n
 Route::get('customer-forgot-password', 'CommonController@customer_forgot_password')->name('customer.forgot');
 Route::post('send_email_otp', 'CommonController@send_email_otp')->name('send_email_otp');
 
-Route::get('/', 'Website\HomeController@index');
+//Route::get('/', 'Website\HomeController@index');
 Route::get('auto_reject_order', 'CronController@auto_reject_order')->name('auto_reject_order');
 Route::get('order_failed', 'CronController@order_failed')->name('order_failed');
-Route::get('both_reject', 'CronController@both_reject')->name('both_reject');
-Route::get('order_expire', 'CronController@order_expire')->name('order_expire');
-Route::get('diet_station', 'CronController@diet_station');
-Route::get('invoice/pdf/{id}', 'InvoiceController@pdf');
-Route::get('reminder', 'CronController@reminder');
-Route::get('test_booky', 'CronController@test_booky');
+
 Route::get('generate_token/{id}', 'CommonController@generate_token')->name('generate_token');
 Route::post('make_payment', 'CommonController@make_payment')->name('make_payment');
 Route::get('transaction_fail/{id}', 'CommonController@transaction_fail')->name('transaction_fail');
@@ -136,8 +134,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'as' => 'admin.', 'mi
     Route::post('active_deactive', 'UserController@active_deactive')->name('active_deactive');
     Route::post('active_deactive_store_board', 'UserController@active_deactive_store_board')->name('active_deactive_store_board');
 
-    // Route::post('active_deactive_school','SchoolController@active_deactive_school')->name('active_deactive_school');
-
     // Route::post('active_deactive_category','CategoryController@active_deactive_category')->name('active_deactive_category');
 
     //  Route::post('active_deactive_family','FamilyController@active_deactive_family')->name('active_deactive_family');
@@ -146,9 +142,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'as' => 'admin.', 'mi
     Route::resource('store', StoreController::class);
     Route::resource('category', CategoryController::class);
     Route::resource('measurement', MeasurementController::class);
-    Route::resource('school', SchoolController::class);
     Route::resource('issue', IssueController::class);
-    Route::resource('grade', GradeController::class);
     Route::resource('banner', BannerController::class);
     Route::resource('orders', OrderController::class);
     Route::resource('family', FamilyController::class);
@@ -184,9 +178,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'as' => 'admin.', 'mi
     Route::get('order/create_order', 'OrderController@create_order')->name('order.create');
 
     Route::post('order/get_user', 'OrderController@get_user')->name('order.get_user');
-    Route::post('order/get_meal', 'OrderController@get_meal')->name('order.get_meal');
-    Route::post('order/get_meal_details', 'OrderController@get_meal_details')->name('order.get_meal_details');
-    Route::post('order/book_meal', 'OrderController@book_meal')->name('order.book_meal');
 
     Route::get('order/refund', 'OrderController@refund')->name('order.refund');
     Route::get('order/all_orders/view/{id}', 'OrderController@all_orders_view')->name('order.all.view');
@@ -215,7 +206,6 @@ Route::group(['namespace' => 'Board', 'prefix' => 'board', 'as' => 'board.', 'mi
     Route::resource('banner', BannerController::class);
     Route::resource('product', ProductController::class);
     Route::resource('orders', OrderController::class);
-    Route::resource('meal', MealController::class);
     Route::post('order_notification_customer', 'OrderController@order_notification_customer')->name('order_notification_customer');
 
     Route::get('report/all_report', 'ReportController@all_report')->name('report.all');
@@ -230,7 +220,6 @@ Route::group(['namespace' => 'Board', 'prefix' => 'board', 'as' => 'board.', 'mi
     Route::post('order/inprocess/date/update', 'OrderController@date_update')->name('order.date.update');
 
     Route::post('active_deactive_product', 'ProductController@active_deactive_product')->name('active_deactive_product');
-    Route::post('active_deactive_meal', 'MealController@active_deactive_meal')->name('active_deactive_meal');
 
     Route::post('pending_order', 'OrderController@pending_order')->name('pending_order');
 
@@ -253,7 +242,6 @@ Route::group(['namespace' => 'Store', 'prefix' => 'store', 'as' => 'store.', 'mi
     Route::resource('category', CategoryController::class);
     Route::resource('product', ProductController::class);
     Route::resource('orders', OrderController::class);
-    Route::resource('meal', MealController::class);
 
     Route::post('order_notification_customer', 'OrderController@order_notification_customer')->name('order_notification_customer');
 
@@ -274,7 +262,6 @@ Route::group(['namespace' => 'Store', 'prefix' => 'store', 'as' => 'store.', 'mi
     Route::post('order/delivered', 'OrderController@delivered')->name('order.delivered');
 
     Route::post('active_deactive_product', 'ProductController@active_deactive_product')->name('active_deactive_product');
-    Route::post('active_deactive_meal', 'MealController@active_deactive_meal')->name('active_deactive_meal');
 
     Route::post('pending_order', 'OrderController@pending_order')->name('pending_order');
 

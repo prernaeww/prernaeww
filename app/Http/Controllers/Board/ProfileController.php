@@ -2,7 +2,6 @@
 namespace App\Http\Controllers\Board;
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Models\School;
 use DataTables;
 use Illuminate\Http\Request;
 use App\Http\Requests;

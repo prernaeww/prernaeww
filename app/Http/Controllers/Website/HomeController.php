@@ -18,7 +18,8 @@ use Exception;
 use Illuminate\Contracts\Encryption\DecryptException;
 use App\Providers\RouteServiceProvider;
 use Socialite;
-
+use Illuminate\Http\Response;
+use Cookie;
 
 class HomeController extends Controller
 {
@@ -27,7 +28,14 @@ class HomeController extends Controller
     public function index()
     {
 
-        // init 
+        Cookie::queue(Cookie::forget('age-restriction'));
+        return redirect('/');
+    }
+
+    public function home()
+    {
+        Cookie::queue(Cookie::forget('age-restriction'));
+
         $api = 'init/ios/0.0.0';
         $method = 1;
         $response = $this->api_call($api, $method);
@@ -37,6 +45,7 @@ class HomeController extends Controller
 
         return view('website.pages.home', $response);
     }
+
 
     public function signup()
     {
@@ -56,15 +65,15 @@ class HomeController extends Controller
 
         // $variables['email'] = $request['email'];
 
-        $m_number = str_replace("(","",$request['phone']);
-        $m_number = str_replace(")","",$m_number);
-        $m_number = str_replace("-","",$m_number);
-        $m_number = ltrim($m_number , '1');
+        $m_number = str_replace("(", "", $request['phone']);
+        $m_number = str_replace(")", "", $m_number);
+        $m_number = str_replace("-", "", $m_number);
+        $m_number = ltrim($m_number, '1');
         $variables['phone'] = $m_number;
 
         $response = $this->api_call($api, $method, $variables);
-        if($response['status'] == TRUE){
-            if(isset($response['data']['otp'])){
+        if ($response['status'] == TRUE) {
+            if (isset($response['data']['otp'])) {
                 $response['data']['crypt_phone'] = Crypt::encrypt($m_number);
             }
         }
@@ -86,10 +95,10 @@ class HomeController extends Controller
         $api = 'register';
         $method = 2;
 
-        $m_number = str_replace("(","",$request->phone);
-        $m_number = str_replace(")","",$m_number);
-        $m_number = str_replace("-","",$m_number);
-        $m_number = ltrim($m_number , '1');
+        $m_number = str_replace("(", "", $request->phone);
+        $m_number = str_replace(")", "", $m_number);
+        $m_number = str_replace("-", "", $m_number);
+        $m_number = ltrim($m_number, '1');
         // dd($m_number);
         $variables = array('email' => $request->email, 'password' => $request->password, 'device_type' => 'web', 'device_token' => 'website', 'first_name' => $request->first_name, 'last_name' => $request->last_name, 'phone' => $m_number, 'device_name' => $device, 'user_type' => $request->user_type);
 
@@ -172,7 +181,7 @@ class HomeController extends Controller
         $response['favorite_store'] = $this->api_call($api, $method, $variables);
         if (!Auth::guest()) {
             $response['user_logged_in'] = TRUE;
-        }else{
+        } else {
             $response['user_logged_in'] = FALSE;
         }
         return json_encode($response);
@@ -415,5 +424,31 @@ class HomeController extends Controller
         // return Socialite::driver("sign-in-with-apple")
         //          ->scopes(["name", "email"])
         //        ->redirect();
+    }
+
+    public function set_cookie(Request $request)
+    {
+        $minutes = 24 * 7;
+        $response = new Response('AgeRestriction');
+        //$response->withCookie(cookie('age-restriction', 'YES', $minutes));        
+        Cookie::queue('age-restriction', "Yes", $minutes);
+
+        $data['status'] = true;
+        $data['message'] = 'successfully';
+        // $data['response'] = $response;
+        return json_encode($data);
+    }
+
+    public function get_cookie(Request $request)
+    {
+        $value = Cookie::get('age-restriction');
+        dd($value);
+    }
+
+    public function age_restriction()
+    {
+        $minutes = 24 * 7;
+        Cookie::queue('age-restriction', "No", $minutes);
+        return View('website.pages.age_restriction');
     }
 }

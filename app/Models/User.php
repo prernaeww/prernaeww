@@ -27,10 +27,6 @@ class User extends Authenticatable {
         'phone',
         'gender',
         'dob',
-        'department',
-        'school',
-        'grade',
-        'class',
         'address',
         'zipcode',
         'latitude',
@@ -97,12 +93,7 @@ class User extends Authenticatable {
     public function getProfilePictureAttribute($profile_picture) {
         return $profile_picture == null ? url('/images/default.png') : url('/images/users/'.$profile_picture);
     }
-    public function children() {
-        return $this->hasMany('App\Models\User', 'parent_id', 'id');
-    }
-    public function school() {
-        return $this->hasOne('App\Models\School', 'id', 'school');
-    }
+  
     public function category() {
         return $this->hasMany('App\Models\Category', 'canteen_id', 'id');
     }
@@ -114,9 +105,6 @@ class User extends Authenticatable {
         return $this->hasMany('App\Models\User', 'parent_id', 'id');    
     }
 
-    public function canteen_school() {
-        return $this->hasMany('App\Models\School', 'canteen_id', 'id');
-    }
     public function devices() {
         return $this->hasOne('App\Models\Devices', 'user_id', 'id');
     }
@@ -132,41 +120,8 @@ class User extends Authenticatable {
         }
     }
 
-    protected $appends = array('has_children','group','school_name','parent_name','age','phone_formatted','grade_name','grade_slug');
+    protected $appends = array('group','age','phone_formatted');
 
-    public function getHasChildrenAttribute()
-    {
-        $user = User::where('parent_id',$this->id)->where('status',1)->get(); 
-        if(count($user) >= 0){
-            return count($user);
-        }
-        return 0;
-    }
-    public function getSchoolNameAttribute()
-    {
-        $school = School::where('id',$this->school)->first(); 
-        if(isset($school)){
-            return $school['name'];
-        }
-        return '';
-    }
-    public function getGradeNameAttribute()
-    {
-        $grade = Grade::where('id',$this->grade)->first(); 
-        if(isset($grade)){
-            return $grade['name'];
-        }
-        return '';
-    }
-    public function getGradeSlugAttribute()
-    {
-        $grade = Grade::where('id',$this->grade)->first(); 
-        if(isset($grade)){
-            return $grade['slug'];
-        }
-        return '';
-    }
-    
     public function getPhoneFormattedAttribute()
     {
         if (isset($this->phone) && $this->phone != "") {
@@ -181,15 +136,7 @@ class User extends Authenticatable {
         $user = UsersGroup::where('user_id',$this->id)->first(); 
         return $user->group_id;
     }
-    public function getParentNameAttribute()
-    {
-        if($this->parent_id != 0){
-            $user = User::where('id',$this->parent_id)->first(); 
-            return $user->first_name.' '.$user->last_name;
-        }else{
-            return "";
-        }
-    }
+   
     public function getAgeAttribute()
     {
         if($this->dob != null){

@@ -3,7 +3,6 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\LoginController;
 use App\Http\Controllers\Api\ProfileController;
-use App\Http\Controllers\Api\MealController;
 use App\Http\Controllers\Api\ContactUsController;
 use App\Http\Controllers\Api\FavoriteStoreController;
 use App\Http\Controllers\Api\StoreController;
@@ -93,54 +92,6 @@ Route::group(['middleware' => ['auth:api','localization']], function () {
     Route::post('/profile_view_edit', [ProfileController::class, 'profile_view_edit']);
 
     Route::post('/delete_children', [ProfileController::class, 'delete_children']);
-
-    
-
-    Route::post('/home', [MealController::class, 'home']);
-
-    Route::post('/get_all_meals', [MealController::class, 'get_all_meals']);
-
-    Route::post('/get_meal_detail', [MealController::class, 'get_meal_detail']);
-
-    Route::post('/get_category_wise_products', [MealController::class, 'get_category_wise_products']);
-
-    Route::post('/get_school_details', [MealController::class, 'get_school_details']);
-
-    Route::post('/date_wise_meal_plan', [MealController::class, 'date_wise_meal_plan']);
-
-    Route::post('/checkout_screen_details', [MealController::class, 'checkout_screen_details']);
-
-    Route::post('/book_meal', [MealController::class, 'book_meal']);
-
-    Route::post('/get_order_details', [MealController::class, 'get_order_details']);
-
-    Route::post('/get_current_order_list', [MealController::class, 'get_current_order_list']);
-
-    Route::post('/get_past_order_list', [MealController::class, 'get_past_order_list']);
-
-    Route::get('/issue_list', [MealController::class, 'issue_list']);
-
-    Route::post('/report_issue', [MealController::class, 'report_issue']);
-
-    Route::post('/get_day_wise_order', [MealController::class, 'get_day_wise_order']);
-
-    Route::post('/get_invoices', [MealController::class, 'get_invoices']);
-
-    Route::post('/favourite_unfavourite_product', [MealController::class, 'favourite_unfavourite_product']);
-
-    Route::post('/blacklist_unblacklist_product', [MealController::class, 'blacklist_unblacklist_product']);
-
-    Route::post('/list_of_favourite', [MealController::class, 'list_of_favourite']);
-
-    Route::post('/list_of_blacklist', [MealController::class, 'list_of_blacklist']);
-
-    Route::post('/search', [MealController::class, 'search']);
-
-    Route::post('/get_all_products', [MealController::class, 'get_all_products']);
-
-    Route::post('/change_order_items', [MealController::class, 'change_order_items']);
-
-    Route::post('/change_order_date', [MealController::class, 'change_order_date']);
 
     // Route::post('/contact_us', [ContactUsController::class, 'index']);
 

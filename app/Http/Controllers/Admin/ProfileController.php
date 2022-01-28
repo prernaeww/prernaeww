@@ -2,7 +2,6 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Models\School;
 use DataTables;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -17,7 +16,6 @@ class ProfileController extends Controller
         $params['pageTittle'] = "Profile";
         $params['backUrl'] = route('admin.dashboard');
         $params['user'] = Auth::user();
-        $params['schools'] = School::whereNull('deleted_at')->get();
         return view('admin.pages.profile',$params);
     }
 

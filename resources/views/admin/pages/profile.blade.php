@@ -28,12 +28,6 @@
 
                     <p class="text-muted mb-2 font-13"><strong>Email :</strong> <span class="ml-2">{{$user['email']}}</span></p>
 
-                    <!-- <p class="text-muted mb-2 font-13"><strong>Gender :</strong> <span class="ml-2">{{$user['gender'] == '1' ? 'Male' : 'Female'}}</span></p>
-
-                    <p class="text-muted mb-2 font-13"><strong>DOB :</strong> <span class="ml-2">{{ $user['dob'] }}</span></p>
-                    <p class="text-muted mb-2 font-13"><strong>Department :</strong> <span class="ml-2">{{ $user['department'] }}</span></p>
-                    <p class="text-muted mb-2 font-13"><strong>Grade :</strong> <span class="ml-2">{{ $user['grade'] }}</span></p>
-                    <p class="text-muted mb-2 font-13"><strong>Class :</strong> <span class="ml-2">{{ $user['class'] }}</span></p> -->
                 </div>
             </div> <!-- end card-box -->
 

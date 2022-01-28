@@ -101,7 +101,7 @@ class StoreController extends Controller
         $params['backUrl'] = route('admin.store.index');
         $mapkey = CommonHelper::ConfigGet('map_key');
         // dd($mapkey);
-        $data = User::select('users.*')->join('users_group', 'users.id', '=', 'users_group.user_id')->where('users_group.group_id',2)->get();
+        $data = User::select('users.*')->join('users_group', 'users.id', '=', 'users_group.user_id')->where('users_group.group_id',2)->where('status',1)->get();
         // dd($data);
         return view('admin.pages.store.post',compact('data','mapkey'),$params);
     }
@@ -214,7 +214,7 @@ class StoreController extends Controller
         $params['user'] = User::find($id);
         
         $params['backUrl'] = route('admin.store.index');
-        $data = User::select('users.*')->join('users_group', 'users.id', '=', 'users_group.user_id')->where('users_group.group_id',2)->get();
+        $data = User::select('users.*')->join('users_group', 'users.id', '=', 'users_group.user_id')->where('users_group.group_id',2)->where('status',1)->get();
         return view('admin.pages.store.put',compact('data'),$params);
     }
 

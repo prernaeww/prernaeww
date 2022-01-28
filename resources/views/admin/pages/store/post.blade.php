@@ -132,7 +132,7 @@
 
                         <div class="col-6">
                             <div class="form-group ">
-                                <label for="grades">Available Service<span class="text-danger">*</span></label>
+                                <label for="customCheck1">Available Service<span class="text-danger">*</span></label>
                                 <div class="row ml-2 d-flex flex-row">
 
                                     <div class="pl-2 pr-3 custom-control custom-checkbox">
@@ -156,7 +156,7 @@
                              <div class="form-group">
                                 <label for="phone">Phone<span class="text-danger">*</span></label>
                                <!--  <input type="text" name="phone" parsley-trigger="change"  required  class="form-control" id="phone" minlength="10"> -->
-                               <input type="text" name="phone" value="{{old('phone')}}" parsley-trigger="change" placeholder="1(XXX)XXX-XXXX" data-mask="1(999)999-9999" required  class="form-control number" data-parsley-maxlength="14"  data-parsley-minlength="14" data-parsley-minlength-message="This value must be at least 14 characters" data-parsley-maxlength="14" data-parsley-maxlength-message="This value must be at least 14 characters">
+                               <input type="text" name="phone" value="{{old('phone')}}" parsley-trigger="change" placeholder="1(XXX)XXX-XXXX" data-mask="1(999)999-9999" required  class="form-control number" data-parsley-maxlength="14"  data-parsley-minlength="14" data-parsley-minlength-message="This value must be at least 10 characters" data-parsley-maxlength="14" data-parsley-maxlength-message="This value must be at least 10 characters">
                                 @error('phone')
                                     <div class="error">{{ $message }}</div>
                                 @enderror

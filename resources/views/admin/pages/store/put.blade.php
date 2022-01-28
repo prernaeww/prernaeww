@@ -128,7 +128,7 @@
                         </div>
                         <div class="col-6">
                             <div class="form-group ">
-                                <label for="grades">Available Service<span class="text-danger">*</span></label>
+                                <label for="customCheck1">Available Service<span class="text-danger">*</span></label>
                                 <div class="row ml-2 d-flex flex-row">
                                     <div class="pl-2 pr-3 custom-control custom-checkbox">
                                             <input type="checkbox" required data-parsley-errors-container="#service"  name="delivery_type[]"  value="1" class="custom-control-input" id="customCheck1" <?php echo ($user->delivery_type == '1' || $user->delivery_type == '3')?"checked":''; ?>>
@@ -146,7 +146,7 @@
                         <div class="col-6">
                             <div class="form-group">
                                 <label for="phone">Phone<span class="text-danger">*</span></label>
-                                <input type="text" name="phone" parsley-trigger="change" value="{{$user->phone_formatted}}" required class="form-control" id="phone" minlength="10" maxlength="10"  readonly>
+                                <input type="text" name="phone" parsley-trigger="change" value="{{$user->phone_formatted}}" class="form-control" id="phone" readonly>
                                 @error('phone')
                                     <div class="error">{{ $message }}</div>
                                 @enderror

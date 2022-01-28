@@ -47,7 +47,7 @@ class ProductController extends Controller
               
                 return $btn;
             })
-            ->rawColumns(['image','category_name','varient_data','status','action'])
+            ->rawColumns(['image','category_name','status','action'])
             ->make(true);
        }
        else

@@ -126,7 +126,7 @@
 
                         <div class="col-6">
                             <div class="form-group ">
-                                <label for="grades">Available Service<span class="text-danger">*</span></label>
+                                <label for="customCheck1">Available Service<span class="text-danger">*</span></label>
                                 <div class="row ml-2 d-flex flex-row">
                                     <div class="pl-2 pr-3 custom-control custom-checkbox">
                                             <input type="checkbox" required  data-parsley-errors-container="#service"  name="delivery_type[]"  value="1" class="custom-control-input" id="customCheck1">

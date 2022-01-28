@@ -14,8 +14,6 @@ use App\Models\Banner;
 
 use App\Models\Orders;
 
-use App\Models\School;
-
 use App\Models\User;
 
 use App\Models\Cart;

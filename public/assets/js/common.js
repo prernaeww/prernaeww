@@ -186,53 +186,6 @@ function active_deactive_store_board(e)
     });
 }
 
-function active_deactive_school(e)
-{
-    var table = $(e).data('table');
-    var id = $(e).data('id');
-    var status = $(e).data('status');
-	var token = $(e).data('token');
-    Notiflix.Confirm.Show(
-      'Confirm',
-      'Are you sure that you want to change status of this record?',
-      'Yes',
-      'No',
-      function(){
-        $('#loader').show();
-        $.ajax({
-              url: '/admin/active_deactive_school',
-              type: "POST",
-			  dataType: "JSON",
-              data:{
-                "table":table,
-                "id":id,
-				"_token": token,
-                "status":status
-              },
-              success: function (returnData) {
-                  returnData = $.parseJSON(returnData);
-                  console.log(returnData);
-                  $('#loader').hide();
-                  if (typeof returnData != "undefined")
-                  {
-                      if(returnData.is_success == false){
-                          Notiflix.Notify.Failure('Something went wrong');
-                      }else{
-                        
-                        Notiflix.Notify.Success('Updated');
-                          // tr.remove();
-                          if(status == 1){
-                            var replace_str = '<button onclick="active_deactive_school(this);" data-table="'+table+'" data-id="'+id+'" data-token= "'+token+'"  class="btn btn-danger btn-xs waves-effect waves-light"  data-status="0">Inactive</button>';
-                          }else{
-                            var replace_str = '<button onclick="active_deactive_school(this);" data-table="'+table+'" data-id="'+id+'" data-token= "'+token+'"  class="btn btn-success btn-xs waves-effect waves-light" data-status="1">Active</button>';
-                          }
-                          $(e).replaceWith(replace_str);
-                      } 
-                  } 
-              }
-          });  
-    });
-}
 
 function active_deactive_category(e)
 {

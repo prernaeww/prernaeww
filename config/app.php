@@ -496,9 +496,6 @@ return [
 
         'CommonHelper' => App\Helpers\CommonHelper::class,
 
-        'BookeeyHelper' => App\Helpers\BookeeyHelper::class,
-
-        'DietStationHelper' => App\Helpers\DietStationHelper::class,
         'PaymentHelper' => App\Helpers\PaymentHelper::class,
 
         'Image' => Intervention\Image\Facades\Image::class,

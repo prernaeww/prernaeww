@@ -108,8 +108,6 @@ class UserController extends Controller {
                 ['data' => 'phone_formatted', 'name' => 'phone_formatted', 'title' => __("Phone"),'searchable'=>false],
                 ['data' => 'status', 'title' => __("Status"), 'searchable' => false],
                 ['data' => 'action', 'name' => 'action', 'title' => "Action", 'searchable' => false, 'orderable' => false]];
-            //['data' => 'school', 'title' => __("School")],
-            //['data' => 'action', 'title' => __("Action"),'searchable'=>false,'orderable'=>false]];
             $groups = Group::get();
             $params['dateTableFields'] = $columns;
             $params['dateTableUrl'] = route('admin.users.index');

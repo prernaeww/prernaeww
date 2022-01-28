@@ -9,8 +9,6 @@ use App\Models\Issue;
 use DataTables;
 use App\Models\OrdersDate;
 use App\Models\User;
-use App\Mail\SendMail;
-use App\Models\School;
 use Mail;
 use NotificationHelper;
 

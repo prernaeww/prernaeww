@@ -256,25 +256,6 @@ Breadcrumbs::for('boarddashboard', function ($trail) {
     $trail->push('Dashboard', route('board.dashboard'));
 });
 
-Breadcrumbs::for('grade', function ($trail) {
-    $trail->parent('dashboard');
-    $trail->push('Grade', route('admin.grade.index'));
-});
-
-Breadcrumbs::for('addgrade', function ($trail) {
-    $trail->parent('dashboard');
-    $trail->push('Grade', route('admin.grade.index'));
-    $trail->push('Add', route('admin.grade.create'));
-});
-
-Breadcrumbs::for('editgrade', function ($trail) {
-    $trail->parent('dashboard');
-    $trail->push('Grade', route('admin.grade.index'));
-    $trail->push('Edit', route('admin.grade.edit',''));
-});
-
-
-
 
 Breadcrumbs::for('banner', function ($trail) {
     $trail->parent('dashboard');

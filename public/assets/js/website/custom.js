@@ -748,3 +748,22 @@ $(document).on("click", "#resend-link", function () {
     },
   });
 });
+
+$("#map-nearby-store").click(function () {  
+  $.ajaxSetup({ 
+    headers: {  
+      "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"), 
+    },  
+  }); 
+  $("#loader").show();  
+  $.ajax({  
+    type: "get",  
+    dataType: "json", 
+    url: "/set-cookie", 
+    data: {}, 
+    success: function (returnData) {  
+      $("#loader").hide();  
+      console.log(`returnData: `, returnData);  
+    },  
+  }); 
+});

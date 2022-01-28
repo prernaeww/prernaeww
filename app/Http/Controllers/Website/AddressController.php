@@ -47,6 +47,7 @@ class AddressController extends Controller
             if (isset($response['status']) && $response['status']) {
                 return redirect()->route('address.index')->with('success', $response['message']);
             } else {
+                return redirect()->route('add_address')->with('error', 'Please select the proper street address from google suggestion.');
                 return redirect()->route('add_address')->with('error', $response['message']);
             }
             return view('website.pages.address.index', $response);
@@ -93,6 +94,7 @@ class AddressController extends Controller
             if (isset($response['status']) && $response['status']) {
                 return redirect()->route('address.index')->with('success', $response['message']);
             } else {
+                return redirect()->route('add_address')->with('error', 'Please select the proper street address from google suggestion.');
                 return redirect()->route('address.edit', $id)->with('error', $response['message']);
             }
         }

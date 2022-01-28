@@ -8,17 +8,22 @@
                 <div class="col-md-10 col-lg-8">
                     <h1 class="text-white mb-3">Let the drinks come to you.</h1>
                     <!-- <p class="font-20 text-white">Beer, wine and liquor delivered in under 60 minutes.</p> -->
-                    <p class="font-20 text-white">Beer, wine and liquor delivered to your doorstep.</p>
+                    <p class="font-20 text-white">Enter zip code to start shopping</p>
                     <input type="hidden" id="administrative_area_level_2" name="zipcode">
                     <input type="hidden" id="administrative_area_level_1" name="state">
                     <input type="hidden" id="zipcode" class="zipcode" name="zipcode">
                     <input type="hidden" id="city" class="city" name="city">
                     <input type="hidden" id="longitude" class="longitude" name="longitude">
                     <input type="hidden" id="latitude" class="latitude" name="latitude">
+                    <input type="hidden" id="street" class="street" name="street">
+                    <input type="hidden" id="state" class="state" name="state">
+                    <input type="hidden" id="location" class="location" name="location">
+                    <input type="hidden" id="counrty" class="counrty" name="counrty">
+                    <input type="hidden" id="state_short_name" class="state_short_name" name="state_short_name">
                     <div class="banner-search mt-5 d-sm-flex align-items-center text-center">
-                        <input type="text" name="" placeholder="Enter your delivery address" id="autocomplete"
-                            autocomplete="off">
-                        <button type="submit" data-toggle="modal" data-target="" id="get_location">Find Store</button>
+                        <input type="text" name="" placeholder="Enter the Zip Code" id="autocomplete" autocomplete="off">
+                        <button type="submit" data-toggle="modal" data-target="" class="get-both-data"
+                            id="get_location">Find Store</button>
                     </div>
                     <div>
                         <p id="lat_log_required" class="t-red"></p>
@@ -59,8 +64,7 @@
                         </div>
                         <div class="total-downloads bg-white p-3 border-r20 shadow">
                             <h3 class="t-blue">800K+ <span class="t-black font-26">Total Downloads</span></h3>
-                            <p class="font-14 mb-0">We were about to write all the reasons why, but someone gave us a
-                                glass of wine and sorry that was just more important. It’s got some cool stuff.</p>
+                            <p class="font-14 mb-0">We were about to write all the reasons why, but someone gave us a glass of drinks and sorry that was just more important. It’s got some cool stuff.</p>
                         </div>
                     </div>
                 </div>
@@ -120,44 +124,6 @@
         </div>
     </section>
 
-    <!--age confirmation Modal -->
-    <div class="modal fade" id="age-confirmation" tabindex="-1" role="dialog" aria-labelledby="age-confirmationTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
-            <div class="modal-content border-r10">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal-body py-5 col-xl-10 mx-auto text-center">
-                    <div>
-                        <a href="index.php" title="" class="login-logo"><img
-                                src="{{ URL::asset('assets/images/website/modal-logo.jpg') }}" alt=""></a>
-                    </div>
-                    <div class="my-5 bg-blue border-r20 p-4 p-md-5">
-                        <h3>Let The Good Times Flow</h3>
-                        <h4 class="t-blue font-400 my-4">Are you 21 ?</h4>
-                        <ul class="age-confirm d-flex justify-content-center align-items-center mb-0">
-                            <li><button class="submit" data-dismiss="modal" data-toggle="modal"
-                                    data-target="#age-restriction-modal">No</button></li>
-                            <li><button id="map-nearby-store" class="submit get-both-data" data-dismiss="modal"
-                                    data-toggle="modal" data-target="">Yes</button></li>
-                            <!-- <li><button class="submit" data-dismiss="modal" data-toggle="modal" data-target="#enter-zip-code">Yes</button></li> -->
-                        </ul>
-                    </div>
-                    <p class="font-14 t-black mb-4 col-md-10 col-lg-8 col-xl-6 mx-auto px-0">By entering this site you agree
-                        to our <a href="{{ $url['about_us'] }}" title="" class="text-underline grey-link"
-                            target="_blank">cookie policy</a>, <a href="{{ $url['term_of_service'] }}" title=""
-                            class="text-underline grey-link" target="_blank">terms and conditions</a> and <a
-                            href="{{ $url['privacy_notice'] }}" title="" class="text-underline grey-link"
-                            target="_blank">privacy policy</a>. We use analytics cookies to enhance your browsing experience
-                        and improve our website. Find out more in our <a href="{{ $url['about_us'] }}" title=""
-                            class="text-underline grey-link" target="_blank">cookie policy</a>.</p>
-                    <h5 class="t-blue mb-5">DRINK RESPONSIBLY.</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!--age restriction-modal Modal -->
     <div class="modal fade" id="age-restriction-modal" tabindex="-1" role="dialog"
         aria-labelledby="age-restriction-modalTitle" aria-hidden="true">
@@ -168,13 +134,13 @@
                 </button>
                 <div class="modal-body py-5 text-center">
                     <div>
-                        <a href="index.php" title="" class="login-logo mb-4"><img
+                        <a href="javascript:void(0)" title="" class="login-logo mb-4"><img
                                 src="{{ URL::asset('assets/images/website/modal-logo.jpg') }}" alt=""></a>
                     </div>
                     <div class="my-5 broken-bottle">
                         <img src="{{ URL::asset('assets/images/website/broken-bottle.jpg') }}" alt="">
                     </div>
-                    <p class="font-20 t-black">Sorry! You need to be 21 to use <br> this App!</p>
+                    <p class="font-20 t-black">Sorry! You need to be 21 to use <br> this Website!</p>
                 </div>
             </div>
         </div>
@@ -189,6 +155,14 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="modal-body py-5 px-md-5 mx-lg-5">
+                    <div class="d-flex justify-content-center mt-5 mt-md-0">
+                        <button type="submit" data-dismiss="modal" data-toggle="modal" data-target="#saved-address-modal">
+                            <div class="map-nearby-store-location">
+                                <p class="t-blue font-24 mb-0">Your Location</p>
+                                <p class="font-18 t-grey mb-0" id="search_location" class="search_location"></p>
+                            </div>
+                        </button>
+                    </div>
                     <div class="col-xl-7 col-lg-9 mx-auto px-0 mt-5 pb-5">
                         <input type="text" name="" class="enter-zipcode-field" placeholder="Search any store"
                             id="suggestion_store" list="suggestion_stores">
@@ -307,6 +281,7 @@
 
 
         $(window).load(function() {
+
             $('#autocomplete').change(function() {
                 $('#latitude').val('');
                 $('#longitude').val('');
@@ -320,13 +295,14 @@
                     // Notiflix.Notify.Failure(msg);
                     return;
                 }
-                $('#age-confirmation').modal('show');
+                // $('#age-confirmation').modal('show');
             });
 
             // $('#map-nearby-store').click(function() {
             $('.get-both-data').click(function() {
                 var latitude = $('#latitude').val();
                 var longitude = $('#longitude').val();
+                var location = $('#location').val();
                 if (!longitude || !latitude) {
                     var msg = 'Please select from google suggestion';
                     $('#lat_log_required').text(msg);
@@ -336,6 +312,7 @@
                 $('#suggestion_store').val('');
                 console.log('latitude:', latitude);
                 console.log('longitude:', longitude);
+                console.log('location:', location);
                 $.ajaxSetup({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -353,6 +330,7 @@
                     success: function(response) {
                         $('#loader').hide();
                         $('#map-nearby-store-modal').modal('show');
+                        $('#search_location').html(location);
                         locations = [];
                         console.log('Store List: ', response);
                         var near_by_store = response.near_by_store.data;
@@ -383,14 +361,14 @@
                                     }
 
                                     var delivery_type =
-                                        `<img src="{{ URL::asset('assets/images/website/pick-up-method1.jpg') }}" alt="" class="mr-3">
-                                            <img src="{{ URL::asset('assets/images/website/pick-up-method2.jpg') }}" alt="">`;
+                                        `<img src="{{ URL::asset('assets/images/website/pick-up-method1.jpg') }}" alt="" style="height: 27px;" class="mr-3">
+                                            <img src="{{ URL::asset('assets/images/website/pick-up-method2.jpg') }}" alt="" style="height: 27px;">`;
                                     if (val.delivery_type == 1) {
                                         var delivery_type =
-                                            `<img src="{{ URL::asset('assets/images/website/pick-up-method1.jpg') }}" alt="" >`;
+                                            `<img src="{{ URL::asset('assets/images/website/pick-up-method1.jpg') }}" alt="" style="height: 27px;" >`;
                                     } else if (val.delivery_type == 2) {
                                         var delivery_type =
-                                            `<img src="{{ URL::asset('assets/images/website/pick-up-method2.jpg') }}" alt="">`;
+                                            `<img src="{{ URL::asset('assets/images/website/pick-up-method2.jpg') }}" alt="" style="height: 27px;">`;
                                     }
 
                                     if (response.user_logged_in == true) {
@@ -426,7 +404,6 @@
                                         ` <option value="${val.first_name} ${val.last_name}" class="store-details" data-id="${val.id}" style="cursor: pointer; "> `;
                                 })
                             });
-
 
                             $('#nearby-store-listing').empty();
                             $('#nearby-store-listing').append(near_by_store_data);
@@ -608,7 +585,8 @@
             google.maps.event.addListener(pickup_places, 'place_changed', function() {
                 var pickup_place = pickup_places.getPlace();
                 var address = pickup_place.address_components;
-                var street = city = state = '';
+                console.log(`address: `, address);
+                var state_short_name = counrty = street = city = state = '';
                 $.each(address, function(i, val) {
                     if ($.inArray('street_number', val['types']) > -1) {
                         street += val['long_name'];
@@ -621,89 +599,23 @@
                     }
                     if ($.inArray('administrative_area_level_1', val['types']) > -1) {
                         state += val['long_name'];
+                        state_short_name += val['short_name'];
+                    }
+                    if ($.inArray('country', val['types']) > -1) {
+                        counrty += val['long_name'];
                     }
                 });
+                console.log(`street: `, street);
+                var location = city + ', ' + state_short_name + ', ' + counrty;
                 $('.latitude').val(pickup_place.geometry.location.lat());
                 $('.longitude').val(pickup_place.geometry.location.lng());
+                $('#street').html(street);
+                $('#city').val(city);
+                $('#state').val(state);
+                $('#counrty').val(counrty);
+                $('#state_short_name').val(state_short_name);
+                $('#location').val(location);
             });
         });
-        //===============================================
-
-        // var placeSearch, autocomplete;
-
-        // var componentForm = {
-
-        //     administrative_area_level_2: 'long_name',
-        //     administrative_area_level_1: 'long_name', 
-        // };
-
-        // function initAutocomplete() {    
-        //   autocomplete = new google.maps.places.Autocomplete(
-        //  (document.getElementById('autocomplete')),
-        //   {types: ['(regions)'] , componentRestrictions: {country: "US"} });
-        // //   autocomplete.addListener('place_changed', fillInAddress);
-        // }
-
-        // function fillInAddress() {
-        //   var place = autocomplete.getPlace();
-        //    for (var component in componentForm) {
-        //       console.log('component: ',component);
-        //     document.getElementById(component).value = '';
-        //     document.getElementById(component).disabled = false;
-        //   }
-
-        //   if (typeof place.address_components != "undefined" || place.address_components != null){
-
-
-        //   // console.log(place.address_components);
-        //       for (var i = 0; i < place.address_components.length; i++) {
-        //           for (var j = 0; j < place.address_components[i].types.length; j++){
-        //               console.log(place.address_components[i]);
-        //               if (place.address_components[i].types[j] == "postal_code") {
-        //                   console.log('zipcode: ',place.address_components[i].long_name);
-        //                   $('#zipcode').val(place.address_components[i].long_name);
-        //               }
-        //               if (place.address_components[i].types[j] == "latitude") {
-        //                   $('.latitude').val(place.address_components[i].long_name);
-        //                   console.log('latitude: ',place.address_components[i].long_name);
-        //               }
-        //               if (place.address_components[i].types[j] == "longitude") {
-        //                   $('.longitude').val(place.address_components[i].long_name);
-        //                   console.log('longitude: ',place.address_components[i].long_name);
-        //               }
-
-        //           }
-        //           $('.latitude').val(place.geometry.location.lat());
-        //           $('.longitude').val(place.geometry.location.lng());
-
-        //           var addressType = place.address_components[i].types[0];
-        //           console.log('addressType : ',addressType);
-        //           if (componentForm[addressType]) {
-        //               var val = place.address_components[i][componentForm[addressType]];
-        //               console.log('val : ',val);
-        //               document.getElementById(addressType).value = val;
-        //           }
-        //       }        
-        //   }
-        // }
-
-        // function geolocate() {
-        //   if (navigator.geolocation) {
-        //     navigator.geolocation.getCurrentPosition(function(position) {
-        //       var geolocation = {
-        //         lat: position.coords.latitude,
-        //         lng: position.coords.longitude,
-        //         zip: position.coords.zipcode,
-        //       };
-
-        //       // console.log(geolocation);
-        //       var circle = new google.maps.Circle({
-        //         center: geolocation,
-        //         radius: position.coords.accuracy
-        //       });
-        //       autocomplete.setBounds(circle.getBounds());
-        //     });
-        //   }
-        // }
     </script>
 @endsection

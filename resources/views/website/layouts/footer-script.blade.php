@@ -1,3 +1,6 @@
+<?php
+$footer_cookie = request()->cookie('age-restriction');    
+?>
 @yield('script')
 
 <script src="{{ URL::asset('assets/js/website/jquery.min.js') }}"></script>
@@ -22,6 +25,17 @@
     if (verifymobile == 'mobile') {
         $("#account-detail-modal").modal("show");
     }
+
+    @if (Auth::guest() && $footer_cookie != 'Yes')  
+        $(window).load(function() { 
+        $('#age-confirmation').modal({  
+        backdrop: 'static', 
+        keyboard: false 
+        }); 
+        console.log('>> >> Show => (Are you 21 ?) ');   
+        }); 
+    @endif  
+
     //========================NUMBER==========================================
     $(document).ready(function() {
         //called when key is pressed in textbox

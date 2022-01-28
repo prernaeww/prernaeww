@@ -99,7 +99,7 @@
                     <div class="row align-items-center">
                         <div class="col-md-6 pr-xl-5 text-center">
                             <div class="account-profile-image">
-                                <img src="{{ url(Auth::user()->profile_picture) }}" alt="" class="border-r20" id="blah">
+                                <img src="{{ url(Auth::user()->profile_picture) }}" alt="" class="border-r20" id="blah" style="max-width: 293px;">
                                 <div class="mt-3">
                                     <label class="image-upload t-black">Change
                                     	<input type="file" name="image" onchange="readURL(this);" data-parsley-max-file-size="5" data-parsley-filemimetypes="image/jpeg, image/png" accept="image/*" data-parsley-file-mime-types-message="Only allowed jpeg & png files">
